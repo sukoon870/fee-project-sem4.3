@@ -1,47 +1,54 @@
 const cardCata = [
     {
         name: "Blouse",
-        img: "",
+        img: "/product1.png",
         price: "$27.00",
     },
     {
         name: "Blouse",
-        img: "",
+        img: "/product2.png",
         price: "$27.00",
     },
     {
         name: "Blouse",
-        img: "",
+        img: "/product3.png",
         price: "$27.00",
     },
 ];
 const Card = ({ name, img, price }) => {
     return (
-        <div className="w-60 aspect-square bg-white grid grid-rows-[90%_auto] gap-2 p-10">
-            <div className="bg-gray-700 w-full h-full p-10 grid place-items-center">
-                <img src={img} alt={name} className="size-fit" />
-            </div>
+        <a
+            href="#"
+            className="w-full aspect-[1.3/1] cursor-pointer hover:scale-[1.02] transition-all hover:drop-shadow-xl bg-white grid grid-rows-[90%_auto] gap-2 p-4"
+        >
+            <div
+                className="bg-[#dde6e8] w-full h-full p-10 grid place-items-center bg-contain bg-center bg-no-repeat"
+                style={{
+                    backgroundImage: `url(${img})`,
+                }}
+            ></div>
             <div className="flex flex-row justify-between text-black">
                 <span>{name}</span>
                 <span className="font-bold">{price}</span>
             </div>
-        </div>
+        </a>
     );
 };
 const Section2 = () => {
     return (
-        <section className="w-full relative flex flex-col items-center">
-            <span className="w-full h-20 absolute top-0 left-0 -translate-x-full bg-[#dde6e8] section-border-clip"></span>
-            <span className="w-full h-20 -scale-y-100 absolute bottom-0 left-0 translate-x-full bg-[#dde6e8] section-border-clip"></span>
-
-            <h1 className="font-bold text-black uppercase py-20">
+        <section
+            className="w-full relative flex flex-col items-center bg-[#dde6e8] pt-20"
+            id="products"
+        >
+            <h1 className="font-bold text-5xl text-black uppercase py-10">
                 Explore the newest product
             </h1>
-            <p className="text-black text-center">
+            <p className="text-black text-center max-w-4xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                eiusmod tempor incididunt ut labore labore et dolore magna
+                aliqua.
             </p>
-            <div className="py-20 flex flex-row flex-wrap gap-10">
+            <div className="py-20 flex flex-row md:w-[60%] gap-10">
                 {cardCata.map((card, index) => (
                     <Card key={index} {...card} />
                 ))}

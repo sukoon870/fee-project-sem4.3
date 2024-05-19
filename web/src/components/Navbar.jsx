@@ -14,29 +14,49 @@
 // ]
 const Navbar = () => {
     return (
-        <nav className="w-full flex flex-row items-center justify-between pt-10 pb-14 px-32 border-b-2 border-b-theme2 border-dotted">
-            <div className="h-40"></div>
-            <div className="flex flex-row items-center justify-center uppercase text-white text-xl">
-                <a href="#" className="">
+        <nav className="w-full flex flex-row items-center justify-between py-10 px-52 border-b-2 border-b-theme2 border-dotted bg-theme4">
+            <div className="">
+                <img src="/public/logo-s.png" alt="logo" draggable={false} />
+            </div>
+            <div className="flex flex-row items-center justify-center uppercase  text-xl">
+                <a
+                    href="#"
+                    className="text-white hover:text-white/60 transition-all"
+                >
                     Home
                 </a>
-                <span className="w-1 h-5 bg-theme1 mx-4"></span>
-                <a href="#" className="">
+                <span className="w-px h-5 bg-theme1 mx-4"></span>
+                <a
+                    href="#company"
+                    className="text-white hover:text-white/60 transition-all"
+                >
                     Company
                 </a>
-                <span className="w-1 h-5 bg-theme1 mx-4"></span>
-                <a href="#" className="">
+                <span className="w-px h-5 bg-theme1 mx-4"></span>
+                <a
+                    href="#sport-stars"
+                    className="text-white hover:text-white/60 transition-all"
+                >
                     Sport stars
                 </a>
-                <span className="w-1 h-5 bg-theme1 mx-4"></span>
-                <a href="#" className="">
+                <span className="w-px h-5 bg-theme1 mx-4"></span>
+                <a
+                    href="#products"
+                    className="mr-4 text-white hover:text-white/60 transition-all"
+                >
                     Products
                 </a>
 
-                <a href="#" className="mx-4">
+                <a
+                    href="#"
+                    className="mx-4 text-white hover:text-white/60 transition-all"
+                >
                     Contact
                 </a>
-                <a href="#" className="mx-4">
+                <a
+                    href="#"
+                    className="mx-4 text-white hover:text-white/60 transition-all"
+                >
                     Buy Now
                 </a>
             </div>

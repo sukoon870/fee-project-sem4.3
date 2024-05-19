@@ -24,11 +24,17 @@ const navItems = [
 ];
 const Footer = () => {
     return (
-        <footer>
-            <div className="navs flex flex-row">
-                <div className="min-w-60">
-                    <img src="" alt="" />
-                    <p>
+        <footer className="relative bg-black">
+            <span className="w-full h-20 -scale-100 absolute top-0 left-0 bg-theme4 section-border-clip"></span>
+            <div className="navs flex flex-row p-40 pb-10 gap-10">
+                <div className="max-w-md px-10 flex flex-col gap-10 items-start">
+                    <img
+                        src="/public/logo-m.png"
+                        alt="logo"
+                        className="w-52"
+                        draggable={false}
+                    />
+                    <p className="leading-5 text-sm">
                         Magento provides different payment methods in order to
                         allow you to accept payments using different payment
                         processors like Pay ... Magento provides different
@@ -38,7 +44,7 @@ const Footer = () => {
                 </div>
                 {navItems.map((item) => (
                     <div
-                        className="nav flex flex-col gap-10 items-start"
+                        className="nav flex flex-col gap-10 items-start px-4"
                         key={item.type}
                     >
                         <h2 className="font-bold text-white">{item.type}</h2>
@@ -47,7 +53,7 @@ const Footer = () => {
                                 <a
                                     key={link}
                                     href="#"
-                                    className="py-4 text-white/50 hover:text-white/80"
+                                    className="py-1 text-white/50 hover:text-white/80"
                                 >
                                     {link}
                                 </a>
@@ -56,7 +62,7 @@ const Footer = () => {
                     </div>
                 ))}
             </div>
-            <div className="p-10 text-center">
+            <div className="p-6 text-center bg-[#111111]">
                 Copyright 2077 by who All rights reserved.
             </div>
         </footer>

@@ -21,6 +21,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 input {
     min-width: 0;
@@ -39,9 +40,28 @@ svg {
 }
 body {
     min-height: 100vh;
+    cursor: default;
 }
 @layer utilities {
     .section-border-clip {
         clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
     }
+}
+.card1 {
+    --url: url("");
+    background: var(--url) no-repeat bottom right,
+        linear-gradient(
+            130deg,
+            theme("colors.theme2") 60%,
+            theme("colors.black") 60.1%
+        );
+}
+.card1-alt {
+    --url: url("");
+    background: var(--url) no-repeat bottom right,
+        linear-gradient(
+            130deg,
+            theme("colors.black") 60%,
+            theme("colors.theme2") 60.1%
+        );
 }
