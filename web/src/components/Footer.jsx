@@ -25,15 +25,17 @@ const navItems = [
 const Footer = () => {
     return (
         <footer className="relative bg-black">
-            <span className="w-full h-20 -scale-100 absolute top-0 left-0 bg-theme4 section-border-clip"></span>
-            <div className="navs flex flex-row p-40 pb-10 gap-10">
-                <div className="max-w-md px-10 flex flex-col gap-10 items-start">
-                    <img
-                        src="/public/logo-m.png"
-                        alt="logo"
-                        className="w-52"
-                        draggable={false}
-                    />
+            <span className="w-full h-40 -scale-100 absolute top-0 left-0 bg-theme4 section-border-clip"></span>
+            <div className="navs flex flex-col lg:flex-row p-20 pt-40 lg:p-40 pb-10 gap-10">
+                <div className="max-w-full lg:max-w-md px-10 flex flex-col gap-10 items-start">
+                    <a href="/">
+                        <img
+                            src="/public/logo-m.png"
+                            alt="logo"
+                            className="w-52"
+                            draggable={false}
+                        />
+                    </a>
                     <p className="leading-5 text-sm">
                         Magento provides different payment methods in order to
                         allow you to accept payments using different payment
@@ -44,11 +46,13 @@ const Footer = () => {
                 </div>
                 {navItems.map((item) => (
                     <div
-                        className="nav flex flex-col gap-10 items-start px-4"
+                        className="nav flex flex-row lg:flex-col gap-10 items-start px-4"
                         key={item.type}
                     >
-                        <h2 className="font-bold text-white">{item.type}</h2>
-                        <div className="flex flex-col gap-1 items-start">
+                        <h2 className="font-bold text-white min-w-32 lg:min-w-0">
+                            {item.type}
+                        </h2>
+                        <div className="flex flex-row lg:flex-col gap-4 lg:gap-1 items-start">
                             {item.links.map((link) => (
                                 <a
                                     key={link}

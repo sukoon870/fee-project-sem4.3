@@ -14,10 +14,10 @@
 // ]
 const Navbar = () => {
     return (
-        <nav className="w-full flex flex-row items-center justify-between py-10 px-52 border-b-2 border-b-theme2 border-dotted bg-theme4">
-            <div className="">
+        <nav className="w-full flex flex-row items-center justify-between py-10 px-52 border-b-2 border-b-theme2 border-do border-dotted bg-theme4">
+            <a href="/" className="">
                 <img src="/public/logo-s.png" alt="logo" draggable={false} />
-            </div>
+            </a>
             <div className="flex flex-row items-center justify-center uppercase  text-xl">
                 <a
                     href="#"
@@ -25,21 +25,21 @@ const Navbar = () => {
                 >
                     Home
                 </a>
-                <span className="w-px h-5 bg-theme1 mx-4"></span>
+                <span className="w-px shrink-0 h-5 bg-theme1 mx-4"></span>
                 <a
                     href="#company"
                     className="text-white hover:text-white/60 transition-all"
                 >
                     Company
                 </a>
-                <span className="w-px h-5 bg-theme1 mx-4"></span>
+                <span className="w-px shrink-0 h-5 bg-theme1 mx-4"></span>
                 <a
                     href="#sport-stars"
                     className="text-white hover:text-white/60 transition-all"
                 >
                     Sport stars
                 </a>
-                <span className="w-px h-5 bg-theme1 mx-4"></span>
+                <span className="w-px shrink-0 h-5 bg-theme1 mx-4"></span>
                 <a
                     href="#products"
                     className="mr-4 text-white hover:text-white/60 transition-all"

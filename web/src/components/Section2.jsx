@@ -48,7 +48,7 @@ const Section2 = () => {
                 eiusmod tempor incididunt ut labore labore et dolore magna
                 aliqua.
             </p>
-            <div className="py-20 flex flex-row md:w-[60%] gap-10">
+            <div className="py-20 flex flex-row md:w-[70%] gap-4">
                 {cardCata.map((card, index) => (
                     <Card key={index} {...card} />
                 ))}
